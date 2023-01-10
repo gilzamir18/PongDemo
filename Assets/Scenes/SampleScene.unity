@@ -153,21 +153,21 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.048311293, y: 0.014101744}
+  m_Offset: {x: -0.2935779, y: -0.035614967}
   m_SpriteTilingProperty:
     border: {x: 0.25, y: 0.25, z: 0.25, w: 0.25}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 0.6869402, y: 5.399771}
+    newSize: {x: 0.6869402, y: 8.813616}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5903163, y: 4.79289}
+  m_Size: {x: 0.7129507, y: 8.803328}
   m_EdgeRadius: 0
 --- !u!50 &2333535
 Rigidbody2D:
@@ -236,7 +236,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 0.6869402, y: 5.399771}
+  m_Size: {x: 0.6869402, y: 8.813616}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -250,7 +250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2333533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.67, y: 0.0257, z: 0}
+  m_LocalPosition: {x: -11.67, y: 0.1177, z: 0}
   m_LocalScale: {x: 1, y: 1.8500001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c773fbe2d2ab74090deec28a23d5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultTimeScale: 1
+  defaultTimeScale: 2
   physicsMode: 1
 --- !u!114 &318618019
 MonoBehaviour:
@@ -330,7 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnabled: 1
   agent: {fileID: 318618022}
-  skipFrame: 8
+  skipFrame: 1
   repeatAction: 1
   controller: {fileID: 318618029}
 --- !u!61 &318618020
@@ -397,14 +397,13 @@ MonoBehaviour:
   numberOfFields: 0
   doneAtNegativeReward: 0
   doneAtPositiveReward: 0
-  MaxStepsPerEpisode: 0
+  MaxStepsPerEpisode: -1
   childrenSensors: 1
   sensors: []
   actuators:
   - {fileID: 947004227}
   - {fileID: 318618030}
-  rewards:
-  - {fileID: 469615693}
+  rewards: []
 --- !u!114 &318618023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,7 +569,6 @@ MonoBehaviour:
   actuatorName: pong
   ball: {fileID: 1526710226}
   sensibility: 0.5
-  other: {fileID: 2038236267}
 --- !u!114 &318618030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,7 +710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344221143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0666, y: 4.83, z: 0}
+  m_LocalPosition: {x: 0.0666, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1.8500001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -749,21 +747,21 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.024154946, y: 0.014101744}
+  m_Offset: {x: 0.36139607, y: 0.014101505}
   m_SpriteTilingProperty:
     border: {x: 0.25, y: 0.25, z: 0.25, w: 0.25}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 0.6869402, y: 5.399771}
+    newSize: {x: 0.6869402, y: 8.846762}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6386299, y: 4.845117}
+  m_Size: {x: 0.69994545, y: 8.8887}
   m_EdgeRadius: 0
 --- !u!50 &469615690
 Rigidbody2D:
@@ -832,7 +830,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 0.6869402, y: 5.399771}
+  m_Size: {x: 0.6869402, y: 8.846762}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -846,7 +844,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469615688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.7065, y: 0.0257, z: 0}
+  m_LocalPosition: {x: 11.7065, y: 0.0256, z: 0}
   m_LocalScale: {x: 1, y: 1.8500001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1137,7 +1135,7 @@ MonoBehaviour:
   agent: {fileID: 2038236267}
   isOutput: 1
   body: {fileID: 2038236273}
-  speed: 20
+  speed: 30
 --- !u!1 &814410717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,7 +1365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   perceptionKey: sensor
-  stackedObservations: 3
+  stackedObservations: 1
   isActive: 1
   normalized: 1
   resetable: 1
@@ -1577,7 +1575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187880822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0666, y: -4.78, z: 0}
+  m_LocalPosition: {x: 0.0666, y: -8, z: 0}
   m_LocalScale: {x: 1, y: 1.8500001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1837,7 +1835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   perceptionKey: sensor
-  stackedObservations: 3
+  stackedObservations: 1
   isActive: 1
   normalized: 1
   resetable: 1
@@ -2063,7 +2061,7 @@ MonoBehaviour:
   numberOfFields: 0
   doneAtNegativeReward: 0
   doneAtPositiveReward: 0
-  MaxStepsPerEpisode: 0
+  MaxStepsPerEpisode: -1
   childrenSensors: 1
   sensors: []
   actuators:
@@ -2071,6 +2069,7 @@ MonoBehaviour:
   - {fileID: 2038236277}
   rewards:
   - {fileID: 2333538}
+  - {fileID: 469615693}
 --- !u!114 &2038236268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2211,7 +2210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c773fbe2d2ab74090deec28a23d5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultTimeScale: 1
+  defaultTimeScale: 2
   physicsMode: 1
 --- !u!114 &2038236277
 MonoBehaviour:
@@ -2255,7 +2254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnabled: 0
   agent: {fileID: 2038236267}
-  skipFrame: 8
+  skipFrame: 1
   repeatAction: 1
   controller: {fileID: 2038236278}
 --- !u!114 &2038236280
@@ -2272,11 +2271,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnabled: 1
   agent: {fileID: 2038236267}
-  skipFrame: 8
+  skipFrame: 1
   repeatAction: 1
   managed: 0
   host: 127.0.0.1
   port: 8080
-  receiveTimeout: 10
+  receiveTimeout: 2000
   receiveBufferSize: 81920
   sendBufferSize: 81920

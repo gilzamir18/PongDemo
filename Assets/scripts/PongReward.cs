@@ -32,7 +32,7 @@ public class PongReward : RewardFunc
         acmReward = 0;
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject == ball)
         {
