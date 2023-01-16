@@ -7,9 +7,11 @@ using TMPro;
 public class PongReward : RewardFunc
 {
     public GameObject ball;
+    public BasicAgent targetAgent;
     public BasicAgent otherAgent;
-    public GameObject otherDisplay;
+    public bool winReward = true;
     public TMP_Text display;
+    public TMP_Text otherDisplay;
 
     private float acmReward;
     private BasicAgent basicAgent;
@@ -22,12 +24,22 @@ public class PongReward : RewardFunc
 
     public override void OnUpdate()
     {
-        display.text = "Score: " + acmReward;;
-        otherDisplay.GetComponent<PongReward>().display.text = "Score: " + (-acmReward);
         if (acmReward != 0)
         {
-            otherAgent.AddReward(-acmReward, this);
-            basicAgent.AddReward(acmReward, this);
+            if (winReward)
+            {
+                targetAgent.AddReward(acmReward, this);
+                display.text = "Score: " + acmReward;
+                otherDisplay.text = "Score: -" + acmReward;
+                otherAgent.Done = true;
+            }
+            else
+            {
+                targetAgent.AddReward(-acmReward, this);
+                display.text = "Score: -" + acmReward;
+                otherDisplay.text = "Score: " + acmReward;
+                otherAgent.Done = true;
+            }
         }
         acmReward = 0;
     }
@@ -46,5 +58,6 @@ public class PongReward : RewardFunc
     {
         acmReward = 0.0f;
         display.text = "Score: 0";
+        otherDisplay.text = "Score: 0";
     }
 }

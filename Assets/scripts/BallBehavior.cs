@@ -29,12 +29,14 @@ public class BallBehavior : MonoBehaviour, IAgentResetListener
     private Rigidbody2D rBody;
 
     private bool started = false;
+    private Vector2 initialPosition = Vector2.zero;
 
     // Start is called before the first frame update
     void Awake()
     {
         agent.AddResetListener(this);
-        rBody = GetComponent<Rigidbody2D>();    
+        rBody = GetComponent<Rigidbody2D>();
+        initialPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -53,7 +55,8 @@ public class BallBehavior : MonoBehaviour, IAgentResetListener
         {
                 rBody.velocity = Vector2.zero;
                 rBody.angularVelocity = 0.0f;
-                started = false;            
+                started = false;
+                gameObject.transform.position = initialPosition;
         }
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -86,15 +89,13 @@ public class BallBehavior : MonoBehaviour, IAgentResetListener
 
     public void OnReset(Agent agent)
     {
-        float ang = Random.Range(-45, 45);
-
         if (Random.Range(0, 2) > 0)
         {
-            direction = (new Vector2(1, 0)).Rotate(ang);
+            direction = new Vector2(1, 0);
         }
         else
         {
-            direction = (new Vector2(-1, 0)).Rotate(ang);
+            direction = new Vector2(-1, 0);
         }
         rBody.velocity = Vector2.zero;
         rBody.angularVelocity = 0.0f;
