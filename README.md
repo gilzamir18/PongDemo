@@ -63,4 +63,4 @@ O resultado deve ser como o mostrado abaixo:
 
 ![](https://public.by.files.1drv.com/y4mE4z_1xivtrP8mdLnopcJSoad1Vs70jnclJtfQrK5GTBCXjnVVfavVBvTgizC0ytDV4acsbPokboN_tnW8iIppCDHZs1OP1ZJ0_NRh5f2T5DTDSrXSIauYIhPOalXStNutHBQ3StqPYfHcseiwq6kqFQasiuaDN_ozHHnkRkIPDOo3Wn2JTat0XamQo0JxU7jlxYSiUzP4TECDSZDGXWh2KHbKBYOtlXXLhjKQNE5ziw)
 
-A jogador da esquerda é pré-programado enquanto que o jogador da esquerda é controlado pela rede neural carregada no código de demonstração. Todo o código mostrado nessa página pode ser obtido no site do projeto [Pong](https://github.com/gilzamir18/PhongDemo), inclusive a rede neural (modelo) usada neste exemplo está no diretório python_scripts/logs (a partir da raiz do repositório).
+A jogador da esquerda é pré-programado enquanto que o jogador da direita é controlado pela rede neural carregada no código de demonstração. Todo o código mostrado nessa página pode ser obtido no site do projeto [Pong](https://github.com/gilzamir18/PhongDemo), inclusive a rede neural (modelo) usada neste exemplo está no diretório python_scripts/logs (a partir da raiz do repositório).
